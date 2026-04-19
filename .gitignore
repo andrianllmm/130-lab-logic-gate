@@ -1,0 +1,25 @@
+# Simulation outputs
+*.vvp
+*.vcd
+*.fst
+*.lxt
+*.ghw
+
+# Build / synthesis outputs
+build/
+out/
+obj/
+*.bit
+*.bin
+*.svf
+*.jou
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / temp files
+*.tmp
+*.bak
+*.backup
