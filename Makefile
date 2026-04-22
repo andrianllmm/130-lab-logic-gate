@@ -1,12 +1,17 @@
 # Automates compilation, simulation, waveform generation,
 # and cleanup for the access control Verilog project.
 
-SRC = src/access_control.v    # Design source file
-TB  = tb/tb_access_control.v  # Testbench file
-SIM_DIR = sim                 # Simulation output directory
+# Design source file
+SRC = src/access_control.v
+# Testbench file
+TB = tb/tb_access_control.v
+# Simulation output directory
+SIM_DIR = sim
+# Compiled simulation executable
+OUT = $(SIM_DIR)/run.vvp
+# Waveform output file
+VCD = $(SIM_DIR)/dump.vcd
 
-OUT = $(SIM_DIR)/run.vvp      # Compiled simulation executable
-VCD = $(SIM_DIR)/dump.vcd     # Waveform output file
 
 # Default target
 all: run
