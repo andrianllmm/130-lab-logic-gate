@@ -12,24 +12,23 @@ module tb_access_control;
 
     // Waveform dump
     initial begin
-        $dumpfile("sim/dump.vcd");
-        $dumpvars(0, tb_access_control);
+        $dumpfile("sim/dump.vcd"); //creates a file named dump.vcd inside a folder named sim, to visualize it
+        $dumpvars(0, tb_access_control); //tells the simulator to record all the signals (vars) within the module tv_access_control; the 0 is shorthand telling it to include all sub-modules as well
     end
+    //thing above basically creates a recording of the circuit's behavior while it runs
 
-    // Apply inputs task
-    task apply_input;
-        input y, s, p, l, t;
+    task apply_input; //this function puts in the input values to begin the benching
+        input y, s, p, l, t; //local variables
         begin
             Y = y; S = s; P = p; L = l; T = t;
-            #10;
+            #10; //tells the simulator to wait for 10 time units
 
             $display("%b %b %b %b %b | %b %b %b",
                      Y, S, P, L, T, A, B, C);
         end
     endtask
 
-    // Check task
-    task check;
+    task check; //this function is conditionals to check if logic does what its supposed to do
         input expA, expB, expC;
         begin
             if (A !== expA || B !== expB || C !== expC) begin
