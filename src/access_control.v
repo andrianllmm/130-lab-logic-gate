@@ -1,4 +1,10 @@
+/*
+Combinational logic access control system for three
+compartments (A, B, C) based on user permissions.
+*/
+
 module access_control (
+
     input  wire Y,  // You
     input  wire S,  // SO
     input  wire P,  // Parents
@@ -10,13 +16,22 @@ module access_control (
     output wire C   // Bitcoin Wallet
 );
 
-    // A = (Y OR S OR P) AND NOT (L OR T)
+    /*
+    A: You, SO, Parents allowed
+       Blocked by Siblings or Pet
+    */
     assign A = (Y | S | P) & ~(L | T);
 
-    // B = (Y OR S) AND NOT (P OR L OR T)
+    /*
+    B: You, SO allowed only
+       Blocked by Parents, Siblings, Pet
+    */
     assign B = (Y | S) & ~(P | L | T);
 
-    // C = Y AND NOT (S OR P OR L OR T)
+    /*
+    C: You only
+       Blocked by anyone else
+    */
     assign C = Y & ~(S | P | L | T);
 
 endmodule
