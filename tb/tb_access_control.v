@@ -78,13 +78,38 @@ module tb_access_control;
         apply_input(0,0,0,1,0); check(0,0,0); // Siblings only
         apply_input(0,0,0,0,1); check(0,0,0); // Pet only
 
-        // Multiple user cases
+        // Two-user combinations
         apply_input(1,1,0,0,0); check(1,1,0); // You + SO
         apply_input(1,0,1,0,0); check(1,0,0); // You + Parents
         apply_input(1,0,0,1,0); check(0,0,0); // You + Siblings
         apply_input(1,0,0,0,1); check(0,0,0); // You + Pet
+        apply_input(0,1,1,0,0); check(1,0,0); // SO + Parents
+        apply_input(0,1,0,1,0); check(0,0,0); // SO + Siblings
+        apply_input(0,1,0,0,1); check(0,0,0); // SO + Pet
+        apply_input(0,0,1,1,0); check(0,0,0); // Parents + Siblings
+        apply_input(0,0,1,0,1); check(0,0,0); // Parents + Pet
+        apply_input(0,0,0,1,1); check(0,0,0); // Siblings + Pet
 
-        // All users active (should deny all)
+        // Three-user combinations
+        apply_input(1,1,1,0,0); check(1,0,0); // You + SO + Parents
+        apply_input(1,1,0,1,0); check(0,0,0); // You + SO + Siblings
+        apply_input(1,1,0,0,1); check(0,0,0); // You + SO + Pet
+        apply_input(1,0,1,1,0); check(0,0,0); // You + Parents + Siblings
+        apply_input(1,0,1,0,1); check(0,0,0); // You + Parents + Pet
+        apply_input(1,0,0,1,1); check(0,0,0); // You + Siblings + Pet
+        apply_input(0,1,1,1,0); check(0,0,0); // SO + Parents + Siblings
+        apply_input(0,1,1,0,1); check(0,0,0); // SO + Parents + Pet
+        apply_input(0,1,0,1,1); check(0,0,0); // SO + Siblings + Pet
+        apply_input(0,0,1,1,1); check(0,0,0); // Parents + Siblings + Pet
+
+        // Four-user combinations
+        apply_input(1,1,1,1,0); check(0,0,0);
+        apply_input(1,1,1,0,1); check(0,0,0);
+        apply_input(1,1,0,1,1); check(0,0,0);
+        apply_input(1,0,1,1,1); check(0,0,0);
+        apply_input(0,1,1,1,1); check(0,0,0);
+
+        // All users
         apply_input(1,1,1,1,1); check(0,0,0);
 
         $finish;
