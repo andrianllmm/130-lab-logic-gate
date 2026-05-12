@@ -100,3 +100,10 @@ View waveform:
 ```sh
 gtkwave sim/dump.vcd
 ```
+
+## FPGA Implementation
+
+- Install Lushay Code
+- Create CST
+- USB using Zadig (powershell `usbipd` for WSL)
+- Build and run

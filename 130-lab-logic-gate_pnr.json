@@ -1,0 +1,636 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.10-39-g33e1c903)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/noCtrlSet": "0 ",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "default",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "27000000.000000",
+        "cst.filename": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.cst",
+        "packer.partno": "GW1NR-LV9QN88PC6/I5",
+        "packer.chipdb": "GW1N-9C",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:1.1-17.10"
+      },
+      "ports": {
+        "Y": {
+          "direction": "input",
+          "bits": [ 1038 ]
+        },
+        "T": {
+          "direction": "input",
+          "bits": [ 6343 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 7708 ]
+        },
+        "P": {
+          "direction": "input",
+          "bits": [ 7707 ]
+        },
+        "L": {
+          "direction": "input",
+          "bits": [ 6346 ]
+        },
+        "C": {
+          "direction": "output",
+          "bits": [ 623 ]
+        },
+        "B": {
+          "direction": "output",
+          "bits": [ 622 ]
+        },
+        "A": {
+          "direction": "output",
+          "bits": [ 621 ]
+        }
+      },
+      "cells": {
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 7751 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 7751 ]
+          }
+        },
+        "Y_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X41Y0/IOBA",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:2.17-2.18",
+            "&PULL_MODE=DOWN": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7720 ],
+            "I": [ 1038 ]
+          }
+        },
+        "T_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y13/IOBB",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:6.17-6.18",
+            "&PULL_MODE=DOWN": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7716 ],
+            "I": [ 6343 ]
+          }
+        },
+        "S_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X41Y0/IOBB",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:3.17-3.18",
+            "&PULL_MODE=DOWN": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7722 ],
+            "I": [ 7708 ]
+          }
+        },
+        "P_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y12/IOBA",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:4.17-4.18",
+            "&PULL_MODE=DOWN": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7723 ],
+            "I": [ 7707 ]
+          }
+        },
+        "L_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y13/IOBA",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:5.17-5.18",
+            "&PULL_MODE=DOWN": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7724 ],
+            "I": [ 6346 ]
+          }
+        },
+        "C_OBUF_O_I_LUT3_F": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "00100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/LUT7",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7731 ],
+            "I1": [ 7722 ],
+            "I0": [ 7720 ],
+            "F": [ 7734 ]
+          }
+        },
+        "C_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y23/IOBA",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:10.17-10.18",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 623 ],
+            "I": [ 7734 ]
+          }
+        },
+        "B_OBUF_O_I_LUT3_F_I2_LUT3_F": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "00000001"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/LUT4",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7716 ],
+            "I1": [ 7724 ],
+            "I0": [ 7723 ],
+            "F": [ 7731 ]
+          }
+        },
+        "B_OBUF_O_I_LUT3_F": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/LUT5",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7731 ],
+            "I1": [ 7722 ],
+            "I0": [ 7720 ],
+            "F": [ 7729 ]
+          }
+        },
+        "B_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET",
+            "NET_BOTTOM_IO_PORT_A": "GND",
+            "NET_BOTTOM_IO_PORT_B": "GND"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X14Y28/IOBA",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:9.17-9.18",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "BOTTOM_IO_PORT_B": "input",
+            "BOTTOM_IO_PORT_A": "input",
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "BOTTOM_IO_PORT_B": [ 7752 ],
+            "BOTTOM_IO_PORT_A": [ 7752 ],
+            "O": [ 622 ],
+            "I": [ 7729 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 7752 ]
+          }
+        },
+        "A_OBUF_O_I_MUX2_LUT5_O_I1_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/LUT1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 7715 ]
+          }
+        },
+        "A_OBUF_O_I_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000011111110"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/LUT0",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7724 ],
+            "I2": [ 7723 ],
+            "I1": [ 7722 ],
+            "I0": [ 7720 ],
+            "F": [ 7714 ]
+          }
+        },
+        "A_OBUF_O_I_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X41Y13/MUX0",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 7716 ],
+            "O": [ 7711 ],
+            "I1": [ 7715 ],
+            "I0": [ 7714 ]
+          }
+        },
+        "A_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X14Y28/IOBB",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:8.17-8.18",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 621 ],
+            "I": [ 7711 ]
+          }
+        }
+      },
+      "netnames": {
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 7751 ] ,
+          "attributes": {
+            "ROUTING": "X0Y0/C4;X0Y0/C4/E261;1;X0Y0/W260;X0Y0/W260/VCC;1;X0Y0/VCC;;1"
+          }
+        },
+        "Y": {
+          "hide_name": 0,
+          "bits": [ 1038 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:2.17-2.18"
+          }
+        },
+        "T": {
+          "hide_name": 0,
+          "bits": [ 6343 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:6.17-6.18"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 7708 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:3.17-3.18"
+          }
+        },
+        "P": {
+          "hide_name": 0,
+          "bits": [ 7707 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:4.17-4.18"
+          }
+        },
+        "L": {
+          "hide_name": 0,
+          "bits": [ 6346 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:5.17-5.18"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 623 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:10.17-10.18"
+          }
+        },
+        "C_OBUF_O_I": {
+          "hide_name": 0,
+          "bits": [ 7734 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/F7;;1;X41Y13/EW20;X41Y13/EW20/F7;1;X42Y13/S820;X42Y13/S820/E121;1;X42Y21/E820;X42Y21/E820/S828;1;X46Y21/S270;X46Y21/S270/E824;1;X46Y23/A0;X46Y23/A0/S272;1"
+          }
+        },
+        "B_OBUF_O_I_LUT3_F_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7731 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/C7;X41Y13/C7/F4;1;X41Y13/F4;;1;X41Y13/C5;X41Y13/C5/F4;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 622 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:9.17-9.18"
+          }
+        },
+        "B_OBUF_O_I": {
+          "hide_name": 0,
+          "bits": [ 7729 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/F5;;1;X41Y13/S830;X41Y13/S830/F5;1;X41Y21/S800;X41Y21/S800/S838;1;X41Y28/W800;X41Y28/W800/N808;1;X33Y28/W800;X33Y28/W800/W808;1;X25Y28/W800;X25Y28/W800/W808;1;X17Y28/W130;X17Y28/W130/W808;1;X16Y28/W270;X16Y28/W270/W131;1;X14Y28/A0;X14Y28/A0/W272;1"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 7752 ] ,
+          "attributes": {
+            "ROUTING": "X14Y28/D6;X14Y28/D6/N270;1;X14Y28/N270;X14Y28/N270/VSS;1;X14Y28/VSS;;1;X14Y28/C6;X14Y28/C6/S221;1;X14Y27/S220;X14Y27/S220/VSS;1;X14Y27/VSS;;1"
+          }
+        },
+        "L_IBUF_I_O[3]": {
+          "hide_name": 0,
+          "bits": [ 7724 ] ,
+          "attributes": {
+            "ROUTING": "X45Y13/W250;X45Y13/W250/W111;1;X43Y13/W200;X43Y13/W200/W252;1;X41Y13/D0;X41Y13/D0/W202;1;X46Y13/F6;;1;X46Y13/EW10;X46Y13/EW10/F6;1;X45Y13/W210;X45Y13/W210/W111;1;X43Y13/W210;X43Y13/W210/W212;1;X41Y13/B4;X41Y13/B4/W212;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "L_IBUF_I_O[2]": {
+          "hide_name": 0,
+          "bits": [ 7723 ] ,
+          "attributes": {
+            "ROUTING": "X46Y12/EW10;X46Y12/EW10/F6;1;X45Y12/W810;X45Y12/W810/W111;1;X41Y12/S210;X41Y12/S210/W814;1;X41Y13/A4;X41Y13/A4/S211;1;X46Y12/F6;;1;X46Y12/EW20;X46Y12/EW20/F6;1;X45Y12/W820;X45Y12/W820/W121;1;X41Y12/S240;X41Y12/S240/W824;1;X41Y13/C0;X41Y13/C0/S241;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "B_OBUF_O_I_LUT3_F_I2[1]": {
+          "hide_name": 0,
+          "bits": [ 7722 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/B7;X41Y13/B7/S252;1;X41Y0/S830;X41Y0/S830/Q6;1;X41Y8/S100;X41Y8/S100/S838;1;X41Y9/S240;X41Y9/S240/S101;1;X41Y11/S250;X41Y11/S250/S242;1;X41Y13/B5;X41Y13/B5/S252;1;X41Y11/S230;X41Y11/S230/S232;1;X41Y13/B0;X41Y13/B0/S232;1;X41Y0/Q6;;1;X41Y0/S100;X41Y0/S100/Q6;1;X41Y1/S800;X41Y1/S800/S101;1;X41Y9/S230;X41Y9/S230/S808;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "B_OBUF_O_I_LUT3_F_I2[0]": {
+          "hide_name": 0,
+          "bits": [ 7720 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/A5;X41Y13/A5/N232;1;X41Y13/A0;X41Y13/A0/X02;1;X41Y0/N830;X41Y0/N830/F6;1;X41Y13/A7;X41Y13/A7/N232;1;X41Y0/F6;;1;X41Y7/S800;X41Y7/S800/S838;1;X41Y15/N230;X41Y15/N230/S808;1;X41Y13/X02;X41Y13/X02/N232;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "L_IBUF_I_O[4]": {
+          "hide_name": 0,
+          "bits": [ 7716 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/C4;X41Y13/C4/E262;1;X46Y13/Q6;;1;X46Y13/E830;X46Y13/E830/Q6;1;X39Y13/E260;X39Y13/E260/W838;1;X41Y13/SEL0;X41Y13/SEL0/E262;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "A_OBUF_O_I_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 7715 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/F1;;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "A_OBUF_O_I_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 7714 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/F0;;1",
+            "src": "/home/andrianllmm/tools/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "A": {
+          "hide_name": 0,
+          "bits": [ 621 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/andrianllmm/dev/curricular/130-lab-logic-gate/src/top.v:8.17-8.18"
+          }
+        },
+        "A_OBUF_O_I": {
+          "hide_name": 0,
+          "bits": [ 7711 ] ,
+          "attributes": {
+            "ROUTING": "X41Y13/OF0;;1;X41Y13/W200;X41Y13/W200/OF0;1;X39Y13/W800;X39Y13/W800/W202;1;X31Y13/W810;X31Y13/W810/W808;1;X23Y13/S810;X23Y13/S810/W818;1;X23Y21/W810;X23Y21/W810/S818;1;X15Y21/S810;X15Y21/S810/W818;1;X15Y28/W220;X15Y28/W220/N818;1;X14Y28/D1;X14Y28/D1/W221;1"
+          }
+        }
+      }
+    }
+  }
+}
